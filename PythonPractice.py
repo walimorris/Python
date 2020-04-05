@@ -44,3 +44,59 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+import random
+
+""" 
+The general idea of a binary search is to speed up the process of finding a value in a 
+given array. Things are sped up when the given array is sorted. The first and last values 
+are given, and the midpoint is found. If the midpoint is the searched value, that index 
+value is returned. If the given value is less than the mid point then the array can be 
+broken up and the lower half searched. If the value is greater than the midpoint then the 
+array can be broken up and the upper half can be searched. This process is repeated until 
+the value is found or it's deemed the value isn't present in the given array.
+Author : Wali Morris 
+File   : binarySearch.py
+Date   : 02/10/2020
+"""
+
+def binarySearch(x, nums):
+    low = 0
+    high = len(nums) - 1
+    while low <= high: # still items to search
+        mid = (low + high) // 2 # find middle item 
+        item = nums[mid]
+        if x == item: # found item 
+            return mid
+        elif x < item:  # x is lower 
+            high = mid -1 # highest value becomes the current mid point - 1
+        else:
+            low = mid + 1 # x is higher; lowest value becomes midpoint + 1
+    return -1 # x is not in list 
+
+def longList(x):
+    """ This method creates a long list of random integers between 0 and 100. 
+    The parameter x represents how many integers to create. Returns a sorted 
+    array of x values. 
+    """
+    array = []
+    while len(array) < x:
+        r = random.randint(1, 100) # establish random number
+        if r not in array: # no duplicates
+            array.append(r) # if r is not a duplicate, append to array
+        array.sort()
+    return array
+
+def main():
+    array = longList(25) # create an array of 25
+    print(array)
+    x = 44 # find this value 
+    item = binarySearch(x, array) # search for x in array
+    if item == -1:
+        print(str(x) + " is not in the list")
+    else:
+        print(str(x) + " is at index: " + str(item))
+
+if __name__ == '__main__':
+    main()
