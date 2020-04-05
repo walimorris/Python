@@ -56,9 +56,8 @@ value is returned. If the given value is less than the mid point then the array 
 broken up and the lower half searched. If the value is greater than the midpoint then the 
 array can be broken up and the upper half can be searched. This process is repeated until 
 the value is found or it's deemed the value isn't present in the given array.
-Author : Wali Morris 
-File   : binarySearch.py
-Date   : 02/10/2020
+
+Author : Wali Morris<walimmorris@gmail.com>
 """
 
 def binarySearch(x, nums):
@@ -97,6 +96,34 @@ def main():
         print(str(x) + " is not in the list")
     else:
         print(str(x) + " is at index: " + str(item))
+
+if __name__ == '__main__':
+    main()
+    
+ 
+
+"""
+The idea of a linear search is to loop through an array of values one by one 
+until the value being searched is found or the array is searched and the given 
+value isn't present. This algorithm represents a linear search. 
+
+Author : Wali Morris<walimmorris@gmail.com>
+"""
+
+def linearSearch(x, nums):
+    """ This method receives two arguments, the value to search(x) and nums(array).
+    The value x will be returned once found. -1 will be returned if x is not present.
+    """
+    for i in range(len(nums)):
+        if nums[i] == x: # x was found, return index value
+            return i
+    return -1 # loop has processed and x was not found in array
+
+def main():
+    x = 10
+    array = [1, 10, 5, 15, 22, 44]
+    arrayValue = linearSearch(x, array)
+    print(str(x) + " is at index: " + str(arrayValue))
 
 if __name__ == '__main__':
     main()
