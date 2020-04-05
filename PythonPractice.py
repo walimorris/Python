@@ -20,7 +20,8 @@ def binaryToDecimal(bNum):
     index = 0 # reading binary digit from right to left beginning at 0 index
     size = len(bString) - 1 # length of the binary digit
     overallSum = 0
-    while size >= 0: # until we reach the first digit in the binary representation, iterating in reverse
+    while size >= 0: 
+    # until we reach the first digit in the binary representation, iterating in reverse
         binaryDigit = int(bString[size]) 
         baseProduct = 2 ** index  
         conversionSum = binaryDigit * baseProduct
