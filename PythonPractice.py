@@ -28,6 +28,7 @@ def binaryToDecimal(bNum):
         size -= 1 # go to next digit to the left 
         index += 1 # increase the index
     return overallSum
+
 def binaryToString(bNum): 
     """
     Converts Binary digit to its string representation
