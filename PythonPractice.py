@@ -41,9 +41,9 @@ def decimalToBinary(num):
     """
     stack = []
     while num > 0:
-        r = num%2
+        r = num % 2
         stack.append(str(r))
-        num = math.floor(num/2)
+        num = math.floor(num / 2)
     binaryNum = ""
     while stack: # while stack is not empty
         num = stack.pop()
