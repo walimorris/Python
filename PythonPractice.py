@@ -21,12 +21,12 @@ def binaryToDecimal(bNum):
     size = len(bString) - 1 # length of the binary digit
     overallSum = 0
     while size >= 0: # until we reach the first digit in the binary representation, iterating in reverse
-        binaryDigit = int(bString[size]) # read the current index from left to right
-        baseProduct = 2 ** index # get the product of base 2 ^ of current index 
-        conversionSum = binaryDigit * baseProduct # sum the product
-        overallSum += conversionSum # add to overall sum
-        size -= 1 # go to next digit to the left 
-        index += 1 # increase the index
+        binaryDigit = int(bString[size]) 
+        baseProduct = 2 ** index  
+        conversionSum = binaryDigit * baseProduct
+        overallSum += conversionSum 
+        size -= 1  
+        index += 1 
     return overallSum
 
 def binaryToString(bNum): 
