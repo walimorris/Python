@@ -9,12 +9,10 @@ Author : Wali Morris<walimmorris@gmail.com>
 
 def binaryToDecimal(bNum):
     """
-    To convert Binary to decimal we read binary numbers from right to left starting
-    at 0 index, here we will call this 'i'. Binary numbers are represented by two
-    digits, 1 or 0 ( on or off ). We multiply the given binary digit ( 0 or 1 ) by
-    base 2^i (i being the index we are currently reading from our binary number).
-    Record the each product and at the end get the sum of all product. This result
-    is the decimal number or this binary representation.
+    To convert Binary to decimal we read binary numbers from right to left startingat 0 index, here we will call 
+    this 'i'. Binary numbers are represented by two digits, 1 or 0 ( on or off ). We multiply the given binary 
+    digit ( 0 or 1 ) by base 2^i (i being the index we are currently reading from our binary number).Record each 
+    product and at the end get the sum of all product. Result is the decimal number of this binary representation.
     """
     bString = binaryToString(bNum) # convert binary digit to string representation
     index = 0 # reading binary digit from right to left beginning at 0 index
@@ -32,12 +30,10 @@ def binaryToDecimal(bNum):
 
 def decimalToBinary(num):
     """
-    To convert a decimal number to binary we first take the decimal number and divide
-    this value by 2. Record the remainder, which will be 0 or 1, and the quotient.  
-    We continue this process until we reach a quotient of 0. The binary representation 
-    will start with the last recorded remainder. So, in this case we will record the 
-    remainder in a stack data structure to utilize the LIFO properties to represent 
-    the binary number.
+    To convert a decimal number to binary we first take the decimal number and divide this value by 2. Record the 
+    remainder, which will be 0 or 1, and the quotient. We continue this process until we reach a quotient of 0. 
+    The binary representation will start with the last recorded remainder. So, in this case we will record the 
+    remainder in a stack data structure to utilize the LIFO properties to represent the binary number.
     """
     stack = []
     while num > 0:
