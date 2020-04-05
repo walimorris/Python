@@ -30,6 +30,26 @@ def binaryToDecimal(bNum):
         index += 1 
     return overallSum
 
+def decimalToBinary(num):
+    """
+    To convert a decimal number to binary we first take the decimal number and divide
+    this value by 2. Record the remainder, which will be 0 or 1, and the quotient.  
+    We continue this process until we reach a quotient of 0. The binary representation 
+    will start with the last recorded remainder. So, in this case we will record the 
+    remainder in a stack data structure to utilize the LIFO properties to represent 
+    the binary number.
+    """
+    stack = []
+    while num > 0:
+        r = num%2
+        stack.append(str(r))
+        num = math.floor(num/2)
+    binaryNum = ""
+    while stack: # while stack is not empty
+        num = stack.pop()
+        binaryNum += num
+    return int(binaryNum) # return binary number 
+
 def binaryToString(bNum): 
     """
     Converts Binary digit to its string representation
