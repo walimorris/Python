@@ -48,7 +48,7 @@ def decimalToBinary(num):
     while stack: # while stack is not empty
         num = stack.pop()
         binaryNum += num
-    return int(binaryNum) # return binary number 
+    return int(binaryNum)
 
 def binaryToString(bNum): 
     """
