@@ -122,7 +122,7 @@ if __name__ == '__main__':
 """
 The idea of a linear search is to loop through an array of values one by one 
 until the value being searched is found or the array is searched and the given 
-value isn't present. This algorithm represents a linear search. 
+value is not present. This algorithm represents a linear search. 
 
 Author : Wali Morris<walimmorris@gmail.com>
 """
