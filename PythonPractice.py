@@ -356,3 +356,29 @@ def main():
         
 if __name__ == '__main__': 
     main() 
+    
+"""
+This is a short program to help find the Distribution of sample Mean and sample
+mean's Standard Deviation based on the Behavior of Sample Mean & Central Limit 
+Theorem. The user will be asked to input the sample Mean and Standard Deviation 
+and receive the Mean of Sample Mean and Standard Deviation of Sample Means
+
+Author : Wali Morris 
+"""
+
+import math
+
+def main():
+
+    sampleMean = int(input("Enter Sample Mean: "))
+    sampleSD = int(input("Enter Sample Standard Deviation: "))
+    sampleCount = int(input("Enter sample count: "))
+    sampleMeanSD = computeSampleSD(sampleCount, sampleSD)
+    print("Mean of Sample Mean: " + str(sampleMean))
+    print("Standard Deviation of Sample Mean: " + str(sampleMeanSD))
+
+def computeSampleSD(sampleCount, sampleSD):
+    return round(sampleSD / math.sqrt(sampleCount), 1)
+
+if __name__ == '__main__':
+    main()
